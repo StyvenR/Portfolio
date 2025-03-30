@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import PhotoProfile from "/assets/Photo-profile.png";
 
 function About() {
   return (
@@ -24,7 +25,7 @@ function About() {
         >
           <img
             className="w-50 h-48 rounded-full"
-            src="/public/assets/Photo-profile.png"
+            src={PhotoProfile}
             alt="Styven RAYA"
           />
           <h3 className="text-2xl font-bold">Styven RAYA</h3>
