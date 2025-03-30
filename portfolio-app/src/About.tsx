@@ -24,7 +24,7 @@ function About() {
         >
           <img
             className="w-50 h-48 rounded-full"
-            src="/src/assets/Photo-profile.png"
+            src="/public/assets/Photo-profile.png"
             alt="Styven RAYA"
           />
           <h3 className="text-2xl font-bold">Styven RAYA</h3>
@@ -55,10 +55,12 @@ function About() {
               allient élégance et performance.
             </p>
             <p>
-              Je m'appelle Styven RAYA, actuellement en formation, je suis à la recherche d'une alternance en tant que développeur web.
+              Je m'appelle Styven RAYA, actuellement en formation, je suis à la
+              recherche d'une alternance en tant que développeur web.
             </p>
             <p>
-              <span className="font-bold">Mes compétences:</span> HTML, CSS, JavaScript, React, TypeScript, MySQL, TailwindCSS.
+              <span className="font-bold">Mes compétences:</span> HTML, CSS,
+              JavaScript, React, TypeScript, MySQL, TailwindCSS.
             </p>
           </motion.div>
           <motion.a
