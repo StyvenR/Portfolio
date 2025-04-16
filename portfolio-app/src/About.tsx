@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import PhotoProfile from "/assets/Photo-profile.png";
+import StyvenRayaCV from "/assets/Styven_RAYA_CV.png";
 
 function About() {
   return (
@@ -64,16 +65,16 @@ function About() {
               JavaScript, React, TypeScript, MySQL, TailwindCSS.
             </p>
           </motion.div>
-          <motion.a
-            href="/src/assets/CV_Styven_RAYA.png"
-            download="CV_Styven_RAYA.png"
+            <motion.a
+            href={StyvenRayaCV}
+            download="Styven_RAYA_CV.png"
             className="text-lg font-bold text-black bg-gray-100 border border-black px-8 py-2 rounded-lg transition-all hover:bg-gray-800 hover:scale-110 hover:text-white hover:shadow-lg"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.5, duration: 1 }}
-          >
+            >
             CV
-          </motion.a>
+            </motion.a>
         </motion.div>
       </motion.div>
       <motion.div
