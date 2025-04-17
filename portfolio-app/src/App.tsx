@@ -8,6 +8,7 @@ import Puissance4Img from "/assets/Puissance4.png";
 import CssGeneratorImg from "/assets/CssGenerator.png";
 import MyMeeticImg from "/assets/MyMeetic.png";
 import MyTwitterImg from "/assets/MyTwitter.png";
+import MySpotify from "/assets/MySpotify.png";
 
 function App() {
   const projects = [
@@ -51,6 +52,14 @@ function App() {
       duration: "4 semaines",
       src: MyTwitterImg,
     },
+    {
+      id: "006",
+      name: "MySpotify",
+      description:
+        "Le but de ce projet était de créer un site de musique en ligne, qui a les mêmes fonctionnalités que Spotify. Il devait être le plus ressemblant possible en terme de fonctionnalités par rapport au site 'Spotify'.",
+      duration: "1 semaines",
+      src: MySpotify,
+    }
   ];
   return (
     <div>

@@ -45,6 +45,7 @@ body {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  transition: transform 0.3s ease, z-index 0.3s ease;
 }
 
 #project-img header h2 {
@@ -68,7 +69,7 @@ body {
 }
 
 .img-container img {
-  width: 700px;
+  width: 800px;
   height: auto;
 }
 
