@@ -6,6 +6,7 @@ interface ProjectsProps {
     id: string;
     name: string;
     description: string;
+    link : string;
     duration: string;
     src: string;
   }[];
@@ -112,7 +113,19 @@ const Project: React.FC<ProjectsProps> = ({ projects }) => {
                   {selectedProjectData?.description}
                 </p>
               </div>
-
+              <div className="mb-6">
+                <h3 className="text-lg font-semibold text-gray-700 mb-2">
+                  Lien du projet:
+                </h3>
+                <a
+                  href={selectedProjectData?.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-600 hover:underline"
+                >
+                  {selectedProjectData?.link}
+                </a>
+              </div>
               <div className="mb-6">
                 <h3 className="text-lg font-semibold text-gray-700 mb-2">
                   Durée
