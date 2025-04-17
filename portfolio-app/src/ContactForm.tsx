@@ -28,24 +28,18 @@ function ContactForm() {
   };
 
   return (
-    <section
-      ref={ref}
-      id="contact"
-      className="bg-gradient-to-b from-gray-600 to-gray-800 min-h-screen"
-    >
-      <div className="text-center mb-12">
-        <h2 className="text-3xl font-bold text-white">Contactez-moi</h2>
-        <p className="text-white mt-2">
-          Je suis à votre écoute pour toute question ou collaboration.
-        </p>
-      </div>
+    <section ref={ref} id="contact" className="pb-16">
       <motion.div
         className="flex items-center justify-center"
         initial={{ opacity: 0, y: 50 }}
         animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
         transition={{ duration: 0.5 }}
       >
-        <div className="contact p-8 bg-white rounded-xl shadow-lg max-w-md w-full">
+        <div className="contact p-8 bg-white rounded-xl shadow-lg max-w-md w-full border border-dark-900 ">
+          <h2 className="text-center text-3xl font-bold">Contactez-moi</h2>
+          <p className="text-white mt-2">
+            Je suis à votre écoute pour toute question ou collaboration.
+          </p>
           <form
             ref={form}
             name="contact"

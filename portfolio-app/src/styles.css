@@ -1,6 +1,8 @@
 @import "tailwindcss";
 
 body {
+  background: url("/public/assets/fond2.png");
+  background-size: cover;
 }
 // Css Projects
 #project-img {
@@ -9,7 +11,7 @@ body {
 
 #project-img h3 {
   font-family: "" Azeret Mono "", monospace;
-  color: rgb(210, 202, 188);
+  color: rgb(14, 14, 14);
   font-style: underline;
 }
 
@@ -65,11 +67,15 @@ body {
   line-height: 1.2;
   position: relative;
   bottom: 30px;
+  border: 1px solid black;
+  padding: 0px 10px 10px 10px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.8);
   display: inline-block;
 }
 
 .img-container img {
-  width: 800px;
+  width: 50%;
   height: auto;
 }
 

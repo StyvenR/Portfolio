@@ -67,7 +67,7 @@ const Project: React.FC<ProjectsProps> = ({ projects }) => {
   return (
     <div>
       {selectedProject ? (
-        <div className="fixed inset-0 bg-gray-800 bg-opacity-95 z-50 flex items-center justify-center">
+        <div className="fixed inset-0 bg-light-100 bg-opacity-95 z-50 flex items-center justify-center">
           <div className="flex w-4/5 h-4/5 bg-white rounded-lg overflow-hidden shadow-2xl">
             {/* Image côté gauche */}
             <div className="w-1/2 bg-gray-200 flex items-center justify-center p-6">
@@ -120,7 +120,6 @@ const Project: React.FC<ProjectsProps> = ({ projects }) => {
                 <a
                   href={selectedProjectData?.link}
                   target="_blank"
-                  rel="noopener noreferrer"
                   className="text-gray-600 hover:underline"
                 >
                   {selectedProjectData?.link}
@@ -139,10 +138,9 @@ const Project: React.FC<ProjectsProps> = ({ projects }) => {
 
       <article
         id="project-img"
-        className="bg-gradient-to-b from-gray-200 to-gray-600"
       >
         <header>
-          <h2 id="projects">Projects</h2>
+          <h2 id="projects" className="bg-white p-8 rounded-xl shadow-lg ">Projects</h2>
         </header>
         <section className="img-group-container" ref={imgGroupContainerRef}>
           <div>
@@ -150,13 +148,13 @@ const Project: React.FC<ProjectsProps> = ({ projects }) => {
               {projects.map((project) => (
                 <li
                   key={project.id}
-                  className="img-container relative cursor-pointer hover:opacity-90 transition-opacity"
+                  className="img-container relative cursor-pointer"
                   onClick={() => handleProjectClick(project.id)}
                 >
                   <img
                     src={project.src}
                     alt={`project ${project.id}`}
-                    className="shadow-md"
+                    className="rounded-md"
                   />
                   <h3>#{project.name}</h3>
                 </li>

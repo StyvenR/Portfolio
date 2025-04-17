@@ -30,7 +30,7 @@ function Navbar() {
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: isVisible ? 0 : -100, opacity: isVisible ? 1 : 0 }}
       transition={{ duration: 0.3 }}
-      className="sticky top-0 z-50 flex items-center justify-between px-8 py-4 text-black backdrop-blur-sm opacity-30 shadow-md"
+      className="sticky top-0 z-50 flex items-center justify-between px-8 py-4 text-black backdrop-blur-sm bg-white shadow-md"
     >
       <motion.div
         className="navbar-brand"

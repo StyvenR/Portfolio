@@ -6,18 +6,18 @@ function About() {
   return (
     <motion.section
       id="about"
-      className="mt-32 px-0 py-24  bg-gradient-to-b from-white to-gray-200 min-h-screen xl:px-32"
+      className="mt-32 px-0 py-24 min-h-screen xl:px-32"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 1 }}
     >
       <motion.div
-        className="container mx-auto"
+        className="container mx-auto bg-gray-100 rounded-lg shadow-2xl p-8"
         initial={{ y: -100 }}
         animate={{ y: 0 }}
         transition={{ duration: 0.8 }}
       >
-        <h2 className="text-4xl font-bold text-center">About Me</h2>
+        <h2 className="text-4xl font-bold text-center ">About Me</h2>
         <motion.div
           className="flex flex-col items-center mt-12 space-y-4"
           initial={{ scale: 0.8 }}
@@ -68,7 +68,7 @@ function About() {
             <motion.a
             href={StyvenRayaCV}
             download="Styven_RAYA_CV.png"
-            className="text-lg font-bold text-black bg-gray-100 border border-black px-8 py-2 rounded-lg transition-all hover:bg-gray-800 hover:scale-110 hover:text-white hover:shadow-lg"
+            className="text-lg font-bold text-black bg-gray-100 border border-black px-8 py-2 rounded-lg transition-all hover:bg-black hover:scale-110 hover:text-white hover:shadow-lg"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.5, duration: 1 }}

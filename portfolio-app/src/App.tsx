@@ -16,7 +16,8 @@ function App() {
       id: "001",
       name: "Morpion",
       description:
-        "Le but de ce projet était de faire toute la logique du jeu du morpion en javascript",
+        "Un jeu de morpion classique (Tic-Tac-Toe) développé en HTML, CSS et JavaScript. Cette application permet à deux joueurs de s'affronter à tour de rôle sur une même interface et garde une trace des scores.",
+      link: "https://github.com/StyvenR/Morpion",
       duration: "3 heures",
       src: MorpionImg,
     },
@@ -24,7 +25,8 @@ function App() {
       id: "002",
       name: "Puissance 4",
       description:
-        "Nous devons réaliser un puissance 4 en javascript avec une interface graphique en HTML et CSS ",
+        "Puissance 4 est un jeu de stratégie classique où deux joueurs s'affrontent pour aligner quatre jetons de leur couleur dans une grille. Ce projet est une implémentation numérique du jeu.",
+      link: "https://github.com/StyvenR/puissance4",
       duration: "2 semaines",
       src: Puissance4Img,
     },
@@ -32,7 +34,8 @@ function App() {
       id: "003",
       name: "CSSGenerator",
       description:
-        "L'idée principale du projet est de développer un programme, qui concatène toutes ces images en un seul sprite",
+        "CSS Generator est un outil PHP qui combine plusieurs images PNG en une seule feuille de sprite et génère le CSS correspondant. Cet outil est utile pour les développeurs web qui souhaitent réduire les requêtes HTTP en combinant plusieurs images en un seul fichier.",
+      link: "https://github.com/StyvenR/CSSGenerator",
       duration: "2 semaines",
       src: CssGeneratorImg,
     },
@@ -40,7 +43,8 @@ function App() {
       id: "004",
       name: "MyMeetic",
       description:
-        "En utilisant la base de données MySQL fournie avec le sujet, nous avons dû créer un site de rencontre pour interagir avec celle-ci.",
+        "My Meetic est une application web de rencontres inspirée du site Meetic. Cette plateforme permet aux utilisateurs de créer un profil, de rechercher des partenaires potentiels et d'interagir avec d'autres membres.",
+      link: "https://github.com/StyvenR/MyMeetic",
       duration: "2 semaines",
       src: MyMeeticImg,
     },
@@ -48,7 +52,8 @@ function App() {
       id: "005",
       name: "MyTwitter",
       description:
-        "Le but de ce projet était de créer un réseau social pour les étudiants de notre promotion, qui a les mêmes fonctionnalités que twitter. Il devait être le plus ressemblant possible en terme de fonctionnalités par rapport au site 'Twitter'.",
+        "Ce projet a pour objectif de créer une plateforme de réseau social similaire à Twitter, permettant aux étudiants de se connecter et d'interagir entre eux. Le système comportera une base de données commune, une interface utilisateur interactive et diverses fonctionnalités permettant une expérience utilisateur dynamique.",
+      link: "https://github.com/StyvenR/MyTwitter",
       duration: "4 semaines",
       src: MyTwitterImg,
     },
@@ -56,13 +61,14 @@ function App() {
       id: "006",
       name: "MySpotify",
       description:
-        "Le but de ce projet était de créer un site de musique en ligne, qui a les mêmes fonctionnalités que Spotify. Il devait être le plus ressemblant possible en terme de fonctionnalités par rapport au site 'Spotify'.",
+        "Ce projet est un lecteur multimédia en ligne exploitant une API pour afficher et gérer des albums, artistes et genres. Développé en React, il permet aux utilisateurs de parcourir et d’écouter des albums via un lecteur audio intégré.",
+      link: "https://github.com/StyvenR/MySpotify",
       duration: "1 semaines",
       src: MySpotify,
-    }
+    },
   ];
   return (
-    <div>
+    <div style={{ background: "rgba(255, 255, 255, 0.8)" }}>
       <Navbar />
       <About />
       <Projects projects={projects} />
