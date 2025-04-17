@@ -140,7 +140,7 @@ const Project: React.FC<ProjectsProps> = ({ projects }) => {
         id="project-img"
       >
         <header>
-          <h2 id="projects" className="bg-white p-8 rounded-xl shadow-lg ">Projects</h2>
+          <h2 id="projects" className="bg-white p-8 opacity-96 rounded-xl shadow-lg ">Projects</h2>
         </header>
         <section className="img-group-container" ref={imgGroupContainerRef}>
           <div>
