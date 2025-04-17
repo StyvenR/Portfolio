@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import emailjs from "@emailjs/browser";
@@ -8,10 +8,14 @@ function ContactForm() {
     threshold: 0.6, // Le pourcentage de visibilité pour déclencher l'animation
   });
   const form = useRef<HTMLFormElement>(null);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
   const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     if (!form.current) return;
+
+    setIsSubmitting(true);
 
     emailjs
       .sendForm("service_337uyem", "template_evn3rmm", form.current, {
@@ -20,11 +24,16 @@ function ContactForm() {
       .then(
         () => {
           alert("Email envoyé !");
+          // Réinitialiser le formulaire après l'envoi réussi
+          form.current?.reset();
         },
         (error) => {
           alert(error.text);
         }
-      );
+      )
+      .finally(() => {
+        setIsSubmitting(false);
+      });
   };
 
   return (
@@ -109,9 +118,14 @@ function ContactForm() {
             </div>
             <button
               type="submit"
-              className="w-full inline-flex justify-center py-3 px-6 border border-transparent rounded-lg shadow-md text-sm font-medium text-black hover:bg-black hover:text-white focus:outline-none  focus:ring-offset-2 focus:ring-black"
+              disabled={isSubmitting}
+              className={`w-full inline-flex justify-center py-3 px-6 border border-transparent rounded-lg shadow-md text-sm font-medium transition-all ${
+                isSubmitting
+                  ? "bg-gray-300 cursor-not-allowed"
+                  : "hover:bg-black hover:scale-105 hover:text-white hover:shadow-lg"
+              }`}
             >
-              Envoyer
+              {isSubmitting ? "Envoi en cours..." : "Envoyer"}
             </button>
           </form>
           <div className="mt-8 text-center">
