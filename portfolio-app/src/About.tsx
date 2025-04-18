@@ -64,21 +64,57 @@ function About() {
               Je m'appelle Styven RAYA, actuellement en formation, je suis à la
               recherche d'une alternance en tant que développeur web.
             </p>
-            <p>
-              <span className="font-bold">Mes compétences:</span> HTML, CSS,
-              JavaScript, React, TypeScript, MySQL, TailwindCSS.
-            </p>
           </motion.div>
-          <motion.a
-            href={StyvenRayaCV}
-            download="Styven_RAYA_CV.png"
-            className="text-lg font-bold text-black bg-white border border-black px-8 py-2 rounded-lg transition-all hover:bg-black hover:scale-110 hover:text-white hover:shadow-lg"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.5, duration: 1 }}
-          >
-            CV
-          </motion.a>
+          <div className="flex gap-4 mt-8">
+            <motion.a
+              href={StyvenRayaCV}
+              download="Styven_RAYA_CV.png"
+              className="text-lg font-bold text-black bg-white border border-black px-8 py-2 rounded-lg transition-all hover:bg-black hover:scale-110 hover:text-white hover:shadow-lg"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.5, duration: 1 }}
+            >
+              CV
+            </motion.a>
+            <motion.a
+              href={StyvenRayaCV}
+              download="Styven_RAYA_CV.png"
+              className="text-lg font-bold text-black bg-white border border-black px-8 py-2 rounded-lg transition-all hover:bg-blue-900 hover:scale-110 hover:text-white hover:shadow-lg"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.5, duration: 1 }}
+            >
+              <img
+                className="w-6 h-6 inline-block mr-2"
+                src="/assets/Linkedin.png"
+                alt="LinkedIn"
+              />
+              LinkedIn
+            </motion.a>
+            <motion.a
+              href={StyvenRayaCV}
+              download="Styven_RAYA_CV.png"
+              className="text-lg font-bold text-black bg-white border border-black px-8 py-2 rounded-lg transition-all hover:bg-black hover:scale-110 hover:text-white hover:shadow-lg"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.5, duration: 1 }}
+              onMouseOver={(e) => {
+              const img = e.currentTarget.querySelector("img");
+              if (img) img.src = "/assets/GithubWhite.png";
+              }}
+              onMouseOut={(e) => {
+              const img = e.currentTarget.querySelector("img");
+              if (img) img.src = "/assets/Github.png";
+              }}
+            >
+              <img
+              className="w-6 h-6 inline-block"
+              src="/assets/Github.png"
+              alt="Github"
+              />
+              Github
+            </motion.a>
+          </div>
         </motion.div>
       </motion.div>
       <motion.div
