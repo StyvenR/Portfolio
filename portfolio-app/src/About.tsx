@@ -1,8 +1,12 @@
 import { motion } from "framer-motion";
 import PhotoProfile from "/assets/Photo-profile.png";
 import StyvenRayaCV from "/assets/Styven_RAYA_CV.png";
+import { useInView } from "react-intersection-observer";
 
 function About() {
+  const { ref, inView } = useInView({
+    threshold: 0.6, // Le pourcentage de visibilité pour déclencher l'animation
+  });
   return (
     <motion.section
       id="about"
@@ -65,16 +69,103 @@ function About() {
               JavaScript, React, TypeScript, MySQL, TailwindCSS.
             </p>
           </motion.div>
-            <motion.a
+          <motion.a
             href={StyvenRayaCV}
             download="Styven_RAYA_CV.png"
             className="text-lg font-bold text-black bg-white border border-black px-8 py-2 rounded-lg transition-all hover:bg-black hover:scale-110 hover:text-white hover:shadow-lg"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.5, duration: 1 }}
-            >
+          >
             CV
-            </motion.a>
+          </motion.a>
+        </motion.div>
+      </motion.div>
+      <motion.div
+        ref={ref}
+        className="container mx-auto bg-white opacity-96 rounded-lg shadow-2xl p-8 border border-dark-900 mt-16"
+        initial={{ y: 50, opacity: 0 }}
+        animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 100 }}
+        transition={{ delay: 0.2, duration: 0.5 }}
+      >
+        <h2 className="text-3xl font-bold text-center mb-8">Compétences</h2>
+
+        <motion.div
+          className="flex justify-center flex-wrap gap-8"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.5, duration: 1 }}
+        >
+          <div className=" flex flex-col items-center">
+            <img
+              className="w-16 h-auto rounded-lg transform transition-transform hover:scale-110"
+              src="/assets/HtmlLogo.png"
+              alt="HTML logo"
+            />
+            <span className="mt-2 text-sm font-medium">HTML</span>
+          </div>
+
+          <div className=" flex flex-col items-center">
+            <img
+              className="w-16 h-auto rounded-lg transform transition-transform hover:scale-110"
+              src="/assets/CSSLogo.png"
+              alt="CSS logo"
+            />
+            <span className="mt-2 text-sm font-medium">CSS</span>
+          </div>
+
+          <div className=" flex flex-col items-center">
+            <img
+              className="w-16 h-auto rounded-lg transform transition-transform hover:scale-110"
+              src="/assets/JsLogo.png"
+              alt="JS logo"
+            />
+            <span className="mt-2 text-sm font-medium">JavaScript</span>
+          </div>
+
+          <div className=" flex flex-col items-center">
+            <img
+              className="w-16 h-auto rounded-lg transform transition-transform hover:scale-110"
+              src="/assets/PHPLogo.png"
+              alt="PHP logo"
+            />
+            <span className="mt-2 text-sm font-medium">PHP</span>
+          </div>
+
+          <div className=" flex flex-col items-center">
+            <img
+              className="w-16 h-auto rounded-lg transform transition-transform hover:scale-110"
+              src="/assets/ReactLogo.png"
+              alt="React logo"
+            />
+            <span className="mt-2 text-sm font-medium">React</span>
+          </div>
+
+          <div className=" flex flex-col items-center">
+            <img
+              className="w-28 h-auto rounded-lg transform transition-transform hover:scale-110"
+              src="/assets/TailwindLogo.png"
+              alt="Tailwind logo"
+            />
+            <span className="mt-2 text-sm font-medium">Tailwind CSS</span>
+          </div>
+          <div className=" flex flex-col items-center">
+            <img
+              className="w-16 h-auto rounded-lg transform transition-transform hover:scale-110"
+              src="/assets/CLogo.png"
+              alt="MySQL logo"
+            />
+            <span className="mt-2 text-sm font-medium">C</span>
+          </div>
+
+          <div className=" flex flex-col items-center">
+            <img
+              className="w-16 h-auto rounded-lg transform transition-transform hover:scale-110"
+              src="/assets/MySQLLogo.png"
+              alt="MySQL logo"
+            />
+            <span className="mt-2 text-sm font-medium">MySQL</span>
+          </div>
         </motion.div>
       </motion.div>
       <motion.div
