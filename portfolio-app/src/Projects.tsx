@@ -154,7 +154,7 @@ const Project: React.FC<ProjectsProps> = ({ projects }) => {
                   <img
                     src={project.src}
                     alt={`project ${project.id}`}
-                    className="rounded-md"
+                    className="rounded-md bg-white border border-gray-300 shadow-xl transition-transform duration-300 transform hover:scale-105"
                   />
                   <h3>#{project.name}</h3>
                 </li>

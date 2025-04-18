@@ -35,7 +35,7 @@ function About() {
           />
           <h3 className="text-2xl font-bold">Styven RAYA</h3>
           <motion.div
-            className="text-center mt-12 mx-10 lg:mx-40 prose prose-lg max-w-none"
+            className="text-center mt-12 mx-10 lg:mx-40 max-w-none"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.5, duration: 1 }}
@@ -99,18 +99,18 @@ function About() {
               animate={{ opacity: 1 }}
               transition={{ delay: 0.5, duration: 1 }}
               onMouseOver={(e) => {
-              const img = e.currentTarget.querySelector("img");
-              if (img) img.src = "/assets/GithubWhite.png";
+                const img = e.currentTarget.querySelector("img");
+                if (img) img.src = "/assets/GithubWhite.png";
               }}
               onMouseOut={(e) => {
-              const img = e.currentTarget.querySelector("img");
-              if (img) img.src = "/assets/Github.png";
+                const img = e.currentTarget.querySelector("img");
+                if (img) img.src = "/assets/Github.png";
               }}
             >
               <img
-              className="w-6 h-6 inline-block"
-              src="/assets/Github.png"
-              alt="Github"
+                className="w-6 h-6 inline-block"
+                src="/assets/Github.png"
+                alt="Github"
               />
               Github
             </motion.a>
