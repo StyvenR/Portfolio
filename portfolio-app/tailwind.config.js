@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  darkMode: "class", 
+  darkMode: "class",
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
@@ -43,6 +43,10 @@ module.exports = {
           "linear-gradient(135deg, rgba(74, 144, 226, 0.8) 0%, rgba(162, 155, 254, 0.8) 25%, rgba(255, 154, 158, 0.8) 50%, rgba(255, 206, 124, 0.8) 75%, rgba(255, 154, 158, 0.8) 100%)",
         "gradient-dark":
           "linear-gradient(135deg, rgba(15, 23, 42, 0.95) 0%, rgba(30, 41, 59, 0.95) 15%, rgba(51, 65, 85, 0.9) 30%, rgba(71, 85, 105, 0.9) 45%, rgba(30, 58, 138, 0.85) 60%, rgba(67, 56, 202, 0.85) 75%, rgba(88, 28, 135, 0.9) 90%, rgba(15, 23, 42, 0.95) 100%)",
+        "progress-light":
+          "linear-gradient(90deg, rgb(59, 130, 246) 0%, rgb(139, 92, 246) 50%, rgb(236, 72, 153) 100%)",
+        "progress-dark":
+          "linear-gradient(90deg, rgb(99, 102, 241) 0%, rgb(168, 85, 247) 50%, rgb(236, 72, 153) 100%)",
       },
       backdropBlur: {
         xs: "2px",
