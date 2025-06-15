@@ -2,13 +2,16 @@ import Navbar from "./Navbar";
 import About from "./About";
 import Projects from "./Projects";
 import ContactForm from "./ContactForm";
-// Import images
 import MorpionImg from "/assets/Morpion.png";
 import Puissance4Img from "/assets/Puissance4.png";
 import CssGeneratorImg from "/assets/CssGenerator.png";
 import MyMeeticImg from "/assets/MyMeetic.png";
 import MyTwitterImg from "/assets/MyTwitter.png";
 import MySpotify from "/assets/MySpotify.png";
+import MyQuizImg from "/assets/MyQuizImg.png";
+import SnapchatImg from "/assets/SnapchatImg.jpg";
+import MernImg from "/assets/MernImg.png";
+import FreeAdsImg from "/assets/FreeAdsImg.png";
 
 function App() {
   const projects = [
@@ -66,9 +69,45 @@ function App() {
       duration: "1 semaines",
       src: MySpotify,
     },
+    {
+      id: "007",
+      name: "My-Quiz",
+      description:
+        "Une application de quiz interactive permettant de créer et de répondre à des questionnaires. Ce projet offre une interface utilisateur intuitive pour tester ses connaissances sur différents sujets.",
+      link: "https://github.com/StyvenR/My-Quiz",
+      duration: "2 semaines",
+      src: MyQuizImg,
+    },
+    {
+      id: "008",
+      name: "Snapchat-Styven",
+      description:
+        "Un clone de Snapchat développé pour reproduire les fonctionnalités principales de l'application de messagerie éphémère. Ce projet explore les concepts de partage de médias temporaires et de communication instantanée.",
+      link: "https://github.com/StyvenR/Snapchat-Styven",
+      duration: "3 semaines",
+      src: SnapchatImg,
+    },
+    {
+      id: "009",
+      name: "MERN-Styven",
+      description:
+        "Une application full-stack développée avec la stack MERN (MongoDB, Express.js, React, Node.js). Ce projet démontre une architecture moderne pour le développement d'applications web complètes.",
+      link: "https://github.com/StyvenR/MERN-Styven",
+      duration: "4 semaines",
+      src: MernImg,
+    },
+    {
+      id: "010",
+      name: "Free-Ads",
+      description:
+        "Une plateforme de petites annonces gratuites permettant aux utilisateurs de publier et consulter des annonces diverses. Ce projet intègre un système de gestion d'annonces avec recherche et filtrage.",
+      link: "https://github.com/StyvenR/Free-Ads",
+      duration: "3 semaines",
+      src: FreeAdsImg,
+    },
   ];
   return (
-    <div style={{ background: "rgba(255, 255, 255, 0.8)" }}>
+    <div>
       <Navbar />
       <About />
       <Projects projects={projects} />

@@ -44,9 +44,11 @@ function ContactForm() {
         animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
         transition={{ duration: 0.5 }}
       >
-        <div className="contact p-8 bg-white rounded-xl shadow-lg max-w-md w-full border border-dark-900 ">
-          <h2 className="text-center text-3xl font-bold">Contactez-moi</h2>
-          <p className="text-white mt-2">
+        <div className="contact p-8 section-bg-light rounded-xl shadow-lg max-w-md w-full transition-all duration-300">
+          <h2 className="text-center text-3xl font-bold text-black dark:text-white transition-colors duration-300">
+            Contactez-moi
+          </h2>
+          <p className="text-gray-600 dark:text-gray-300 mt-2 transition-colors duration-300">
             Je suis à votre écoute pour toute question ou collaboration.
           </p>
           <form
@@ -59,7 +61,7 @@ function ContactForm() {
             <div className="form-group">
               <label
                 htmlFor="name"
-                className="block text-sm font-medium text-black"
+                className="block text-sm font-medium text-black dark:text-gray-300 transition-colors duration-300"
               >
                 Nom:
               </label>
@@ -67,14 +69,14 @@ function ContactForm() {
                 type="text"
                 name="name"
                 id="name"
-                className="mt-2 block w-full px-4 py-3 border border-black rounded-lg shadow-sm sm:text-sm  focus:ring-black "
+                className="mt-2 block w-full px-4 py-3 border border-gray-300 dark:border-gray-500 bg-white dark:bg-gray-700 text-black dark:text-white rounded-lg shadow-sm sm:text-sm focus:ring-blue-500 dark:focus:ring-gray-400 focus:border-blue-500 dark:focus:border-gray-400 transition-all duration-300"
                 required
               />
             </div>
             <div>
               <label
                 htmlFor="email"
-                className="block text-sm font-medium text-black"
+                className="block text-sm font-medium text-black dark:text-gray-300 transition-colors duration-300"
               >
                 Email:
               </label>
@@ -82,14 +84,14 @@ function ContactForm() {
                 type="email"
                 name="email"
                 id="email"
-                className="mt-2 block w-full px-4 py-3 border border-black rounded-lg shadow-sm sm:text-sm  focus:ring-black "
+                className="mt-2 block w-full px-4 py-3 border border-gray-300 dark:border-gray-500 bg-white dark:bg-gray-700 text-black dark:text-white rounded-lg shadow-sm sm:text-sm focus:ring-blue-500 dark:focus:ring-gray-400 focus:border-blue-500 dark:focus:border-gray-400 transition-all duration-300"
                 required
               />
             </div>
             <div className="form-group">
               <label
                 htmlFor="subject"
-                className="block text-sm font-medium text-black"
+                className="block text-sm font-medium text-black dark:text-gray-300 transition-colors duration-300"
               >
                 Sujet:
               </label>
@@ -97,21 +99,21 @@ function ContactForm() {
                 type="text"
                 name="subject"
                 id="subject"
-                className="mt-2 block w-full px-4 py-3 border border-black rounded-lg shadow-sm sm:text-sm focus:ring-black "
+                className="mt-2 block w-full px-4 py-3 border border-gray-300 dark:border-gray-500 bg-white dark:bg-gray-700 text-black dark:text-white rounded-lg shadow-sm sm:text-sm focus:ring-blue-500 dark:focus:ring-gray-400 focus:border-blue-500 dark:focus:border-gray-400 transition-all duration-300"
                 required
               />
             </div>
             <div>
               <label
                 htmlFor="message"
-                className="block text-sm font-medium text-black"
+                className="block text-sm font-medium text-black dark:text-gray-300 transition-colors duration-300"
               >
                 Message:
               </label>
               <textarea
                 name="message"
                 id="message"
-                className="mt-2 block w-full px-4 py-3 border border-black rounded-lg shadow-sm sm:text-sm  focus:ring-black "
+                className="mt-2 block w-full px-4 py-3 border border-gray-300 dark:border-gray-500 bg-white dark:bg-gray-700 text-black dark:text-white rounded-lg shadow-sm sm:text-sm focus:ring-blue-500 dark:focus:ring-gray-400 focus:border-blue-500 dark:focus:border-gray-400 transition-all duration-300"
                 rows={4}
                 required
               ></textarea>
@@ -119,17 +121,17 @@ function ContactForm() {
             <button
               type="submit"
               disabled={isSubmitting}
-              className={`w-full inline-flex justify-center py-3 px-6 border border-transparent rounded-lg shadow-md text-sm font-medium transition-all ${
+              className={`w-full inline-flex justify-center py-3 px-6 border border-gray-300 dark:border-gray-500 rounded-lg shadow-md text-sm font-medium transition-all duration-300 ${
                 isSubmitting
-                  ? "bg-gray-300 cursor-not-allowed"
-                  : "hover:bg-black hover:scale-105 hover:text-white hover:shadow-lg"
+                  ? "bg-gray-300 dark:bg-gray-600 cursor-not-allowed text-gray-500"
+                  : "bg-white dark:bg-gray-700 text-black dark:text-white hover:bg-gray-100 dark:hover:bg-gray-600 hover:scale-105 hover:shadow-lg"
               }`}
             >
               {isSubmitting ? "Envoi en cours..." : "Envoyer"}
             </button>
           </form>
           <div className="mt-8 text-center">
-            <h3 className="text-lg font-semibold text-black-800">
+            <h3 className="text-lg font-semibold text-black dark:text-white transition-colors duration-300">
               Réseaux sociaux
             </h3>
             <div className="flex justify-center space-x-4 mt-4">
@@ -137,7 +139,7 @@ function ContactForm() {
                 href="https://www.linkedin.com/in/styven-raya-ab5312302/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-black hover:text-blue-600"
+                className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-300"
               >
                 LinkedIn
               </a>
@@ -145,7 +147,7 @@ function ContactForm() {
                 href="https://github.com/StyvenR"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-black hover:text-gray-300"
+                className="text-gray-600 dark:text-gray-300 hover:text-gray-800 dark:hover:text-gray-100 transition-colors duration-300"
               >
                 GitHub
               </a>

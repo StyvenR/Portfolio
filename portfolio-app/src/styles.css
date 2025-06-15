@@ -1,10 +1,94 @@
 @import "tailwindcss";
 
 body {
-  background: url("/public/assets/fond2.png");
+  background: linear-gradient(
+      135deg,
+      rgba(74, 144, 226, 0.8) 0%,
+      rgba(162, 155, 254, 0.8) 25%,
+      rgba(255, 154, 158, 0.8) 50%,
+      rgba(255, 206, 124, 0.8) 75%,
+      rgba(255, 154, 158, 0.8) 100%
+    ),
+    url("/assets/fond2.png");
   background-size: cover;
+  background-attachment: fixed;
+  transition: all 0.3s ease;
+  min-height: 100vh;
 }
-// Css Projects
+
+.dark body {
+  background: linear-gradient(
+      135deg,
+      rgba(15, 23, 42, 0.95) 0%,
+      rgba(30, 41, 59, 0.95) 15%,
+      rgba(51, 65, 85, 0.9) 30%,
+      rgba(71, 85, 105, 0.9) 45%,
+      rgba(30, 58, 138, 0.85) 60%,
+      rgba(67, 56, 202, 0.85) 75%,
+      rgba(88, 28, 135, 0.9) 90%,
+      rgba(15, 23, 42, 0.95) 100%
+    ),
+    url("/assets/fond2.png");
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+
+.section-bg-light {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 32px rgba(74, 144, 226, 0.1);
+}
+
+.dark .section-bg-light {
+  background: rgba(15, 23, 42, 0.4);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(67, 56, 202, 0.3);
+  box-shadow: 0 8px 32px rgba(30, 58, 138, 0.2);
+}
+
+.navbar-glass {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(25px);
+  border-bottom: 1px solid rgba(162, 155, 254, 0.3);
+  box-shadow: 0 4px 16px rgba(74, 144, 226, 0.1);
+}
+
+.dark .navbar-glass {
+  background: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(25px);
+  border-bottom: 1px solid rgba(67, 56, 202, 0.4);
+  box-shadow: 0 4px 16px rgba(30, 58, 138, 0.2);
+}
+
+.project-modal-bg {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(25px);
+  border: 1px solid rgba(162, 155, 254, 0.3);
+  box-shadow: 0 12px 40px rgba(74, 144, 226, 0.15);
+}
+
+.dark .project-modal-bg {
+  background: rgba(15, 23, 42, 0.5);
+  backdrop-filter: blur(25px);
+  border: 1px solid rgba(67, 56, 202, 0.4);
+  box-shadow: 0 12px 40px rgba(30, 58, 138, 0.25);
+}
+
+.project-image-container {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 206, 124, 0.3);
+}
+
+.dark .project-image-container {
+  background: rgba(30, 41, 59, 0.4);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(71, 85, 105, 0.4);
+}
+
+/* Css Projects */
 #project-img {
   width: 98vw;
 }
@@ -13,6 +97,13 @@ body {
   font-family: "" Azeret Mono "", monospace;
   color: rgb(14, 14, 14);
   font-style: underline;
+}
+
+/* Dark mode for project titles */
+.dark #project-img h3 {
+  color: rgb(255, 255, 255);
+  background: rgba(17, 24, 39, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 #project-img header,
@@ -72,8 +163,21 @@ body {
   border-radius: 10px;
   background: rgba(255, 255, 255, 0.8);
   display: inline-block;
+  transition: all 0.3s ease;
 }
 
+/* Dark mode for project container titles */
+.dark .img-container h3 {
+  background: rgba(17, 24, 39, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: white;
+}
+.Light-Bg {
+  background-image: rgba(255, 255, 255, 0.8);
+}
+.Dark-Bg {
+  background-image: rgba(17, 24, 39, 0.8);
+}
 .img-container img {
   width: 45%;
   height: auto;
@@ -87,6 +191,12 @@ body {
   background: black;
   bottom: 50px;
   transform: scaleX(0);
+  transition: background-color 0.3s ease;
+}
+
+/* Dark mode for progress bar */
+.dark .progress {
+  background: white;
 }
 
 @media (max-width: 1024px) {
@@ -102,4 +212,3 @@ body {
     width: 80%;
   }
 }
-

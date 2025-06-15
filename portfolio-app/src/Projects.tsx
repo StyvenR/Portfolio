@@ -6,7 +6,7 @@ interface ProjectsProps {
     id: string;
     name: string;
     description: string;
-    link : string;
+    link: string;
     duration: string;
     src: string;
   }[];
@@ -67,10 +67,11 @@ const Project: React.FC<ProjectsProps> = ({ projects }) => {
   return (
     <div>
       {selectedProject ? (
-        <div className="fixed inset-0 bg-light-100 bg-opacity-95 z-50 flex items-center justify-center">
-          <div className="flex w-4/5 h-4/5 bg-white rounded-lg overflow-hidden shadow-2xl">
+        <div className="fixed inset-0 bg-black bg-opacity-75 dark:bg-opacity-95 z-50 flex items-center justify-center">
+          {" "}
+          <div className="flex w-4/5 h-4/5 project-modal-bg rounded-lg overflow-hidden shadow-2xl">
             {/* Image côté gauche */}
-            <div className="w-1/2 bg-gray-200 flex items-center justify-center p-6">
+            <div className="w-1/2 project-image-container flex items-center justify-center p-6">
               <img
                 src={selectedProjectData?.src}
                 alt={selectedProjectData?.name}
@@ -81,12 +82,12 @@ const Project: React.FC<ProjectsProps> = ({ projects }) => {
             {/* Description côté droit */}
             <div className="w-1/2 p-8 flex flex-col">
               <div className="flex justify-between items-center mb-6">
-                <h2 className="text-3xl font-bold text-gray-800">
+                <h2 className="text-3xl font-bold text-gray-800 dark:text-white">
                   #{selectedProjectData?.name}
                 </h2>
                 <button
                   onClick={() => setSelectedProject(null)}
-                  className="text-gray-600 hover:text-gray-900 p-2"
+                  className="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white p-2"
                 >
                   <svg
                     className="w-6 h-6"
@@ -106,41 +107,46 @@ const Project: React.FC<ProjectsProps> = ({ projects }) => {
               </div>
 
               <div className="mb-6">
-                <h3 className="text-lg font-semibold text-gray-700 mb-2">
+                <h3 className="text-lg font-semibold text-gray-700 dark:text-gray-300 mb-2">
                   Description
                 </h3>
-                <p className="text-gray-600">
+                <p className="text-gray-600 dark:text-gray-400">
                   {selectedProjectData?.description}
                 </p>
               </div>
               <div className="mb-6">
-                <h3 className="text-lg font-semibold text-gray-700 mb-2">
+                <h3 className="text-lg font-semibold text-gray-700 dark:text-gray-300 mb-2">
                   Lien du projet:
                 </h3>
                 <a
                   href={selectedProjectData?.link}
                   target="_blank"
-                  className="text-gray-600 hover:underline"
+                  className="text-gray-600 dark:text-gray-400 hover:underline"
                 >
                   {selectedProjectData?.link}
                 </a>
               </div>
               <div className="mb-6">
-                <h3 className="text-lg font-semibold text-gray-700 mb-2">
+                <h3 className="text-lg font-semibold text-gray-700 dark:text-gray-300 mb-2">
                   Durée
                 </h3>
-                <p className="text-gray-600">{selectedProjectData?.duration}</p>
+                <p className="text-gray-600 dark:text-gray-400">
+                  {selectedProjectData?.duration}
+                </p>
               </div>
             </div>
           </div>
         </div>
       ) : null}
 
-      <article
-        id="project-img"
-      >
+      <article id="project-img">
         <header>
-          <h2 id="projects" className="bg-white p-8 opacity-96 rounded-xl shadow-lg ">Projects</h2>
+          <h2
+            id="projects"
+            className="bg-white dark:bg-gray-800 dark:text-white p-8 opacity-96 rounded-xl shadow-lg "
+          >
+            Projects
+          </h2>
         </header>
         <section className="img-group-container" ref={imgGroupContainerRef}>
           <div>

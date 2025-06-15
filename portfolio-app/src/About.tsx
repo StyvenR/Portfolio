@@ -10,18 +10,20 @@ function About() {
   return (
     <motion.section
       id="about"
-      className="mt-32 px-0 py-24 min-h-screen xl:px-32 "
+      className="theme mt-32 px-0 py-24 min-h-screen xl:px-32 transition-colors duration-300"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 1 }}
     >
       <motion.div
-        className="container mx-auto bg-white opacity-96 rounded-lg shadow-2xl p-8 border border-dark-900"
+        className="container mx-auto section-bg-light rounded-lg shadow-2xl p-8 transition-all duration-300"
         initial={{ y: -100 }}
         animate={{ y: 0 }}
         transition={{ duration: 0.8 }}
       >
-        <h2 className="text-4xl font-bold text-center ">About Me</h2>
+        <h2 className="text-4xl font-bold text-center text-black dark:text-white transition-colors duration-300">
+          About Me
+        </h2>
         <motion.div
           className="flex flex-col items-center mt-12 space-y-4"
           initial={{ scale: 0.8 }}
@@ -33,14 +35,16 @@ function About() {
             src={PhotoProfile}
             alt="Styven RAYA"
           />
-          <h3 className="text-2xl font-bold">Styven RAYA</h3>
+          <h3 className="text-2xl font-bold text-black dark:text-white transition-colors duration-300">
+            Styven RAYA
+          </h3>
           <motion.div
-            className="text-center mt-12 mx-10 lg:mx-40 max-w-none"
+            className="text-center mt-12 mx-10 lg:mx-40 max-w-none text-gray-800 dark:text-gray-300 transition-colors duration-300"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.5, duration: 1 }}
           >
-            <p className="italic font-serif text-xl">
+            <p className="italic font-serif text-xl text-gray-700 dark:text-gray-200 transition-colors duration-300">
               "Chaque ligne de code est une nouvelle page dans mon histoire
               numérique."
             </p>
@@ -69,7 +73,7 @@ function About() {
             <motion.a
               href={StyvenRayaCV}
               download="Styven_RAYA_CV.png"
-              className="text-lg font-bold text-black bg-white border border-black px-8 py-2 rounded-lg transition-all hover:bg-black hover:scale-110 hover:text-white hover:shadow-lg"
+              className="text-lg font-bold text-black dark:text-white bg-white dark:bg-gray-700 border border-black dark:border-gray-500 px-8 py-2 rounded-lg transition-all hover:bg-black dark:hover:bg-white hover:scale-110 hover:text-white dark:hover:text-black hover:shadow-lg"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.5, duration: 1 }}
@@ -77,9 +81,10 @@ function About() {
               CV
             </motion.a>
             <motion.a
-              href={StyvenRayaCV}
+              href="https://www.linkedin.com/in/styven-raya-ab5312302/"
+              target="_blank"
               download="Styven_RAYA_CV.png"
-              className="text-lg font-bold text-black bg-white border border-black px-8 py-2 rounded-lg transition-all hover:bg-blue-900 hover:scale-110 hover:text-white hover:shadow-lg"
+              className="text-lg font-bold text-black dark:text-white bg-white dark:bg-gray-700 border border-black dark:border-gray-500 px-8 py-2 rounded-lg transition-all hover:bg-blue-900 hover:scale-110 hover:text-white hover:shadow-lg"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.5, duration: 1 }}
@@ -92,9 +97,9 @@ function About() {
               LinkedIn
             </motion.a>
             <motion.a
-              href={StyvenRayaCV}
-              download="Styven_RAYA_CV.png"
-              className="text-lg font-bold text-black bg-white border border-black px-8 py-2 rounded-lg transition-all hover:bg-black hover:scale-110 hover:text-white hover:shadow-lg"
+              href="https://github.com/StyvenR"
+              target="_blank"
+              className="text-lg font-bold text-black dark:text-white bg-white dark:bg-gray-700 border border-black dark:border-gray-500 px-8 py-2 rounded-lg transition-all hover:bg-black dark:hover:bg-white hover:scale-110 hover:text-white dark:hover:text-black hover:shadow-lg"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.5, duration: 1 }}
@@ -119,12 +124,14 @@ function About() {
       </motion.div>
       <motion.div
         ref={ref}
-        className="container mx-auto bg-white opacity-96 rounded-lg shadow-2xl p-8 border border-dark-900 mt-16"
+        className="container mx-auto section-bg-light opacity-96 rounded-lg shadow-2xl p-8 mt-16 transition-all duration-300"
         initial={{ y: 50, opacity: 0 }}
         animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 100 }}
         transition={{ delay: 0.2, duration: 0.5 }}
       >
-        <h2 className="text-3xl font-bold text-center mb-8">Compétences</h2>
+        <h2 className="text-3xl font-bold text-center mb-8 text-black dark:text-white transition-colors duration-300">
+          Compétences
+        </h2>
 
         <motion.div
           className="flex justify-center flex-wrap gap-8"
@@ -138,7 +145,9 @@ function About() {
               src="/assets/HtmlLogo.png"
               alt="HTML logo"
             />
-            <span className="mt-2 text-sm font-medium">HTML</span>
+            <span className="mt-2 text-sm font-medium text-black dark:text-gray-300 transition-colors duration-300">
+              HTML
+            </span>
           </div>
 
           <div className=" flex flex-col items-center">
@@ -147,7 +156,9 @@ function About() {
               src="/assets/CSSLogo.png"
               alt="CSS logo"
             />
-            <span className="mt-2 text-sm font-medium">CSS</span>
+            <span className="mt-2 text-sm font-medium text-black dark:text-gray-300 transition-colors duration-300">
+              CSS
+            </span>
           </div>
 
           <div className=" flex flex-col items-center">
@@ -156,7 +167,9 @@ function About() {
               src="/assets/JsLogo.png"
               alt="JS logo"
             />
-            <span className="mt-2 text-sm font-medium">JavaScript</span>
+            <span className="mt-2 text-sm font-medium text-black dark:text-gray-300 transition-colors duration-300">
+              JavaScript
+            </span>
           </div>
 
           <div className=" flex flex-col items-center">
@@ -165,7 +178,9 @@ function About() {
               src="/assets/PHPLogo.png"
               alt="PHP logo"
             />
-            <span className="mt-2 text-sm font-medium">PHP</span>
+            <span className="mt-2 text-sm font-medium text-black dark:text-gray-300 transition-colors duration-300">
+              PHP
+            </span>
           </div>
 
           <div className=" flex flex-col items-center">
@@ -174,7 +189,9 @@ function About() {
               src="/assets/ReactLogo.png"
               alt="React logo"
             />
-            <span className="mt-2 text-sm font-medium">React</span>
+            <span className="mt-2 text-sm font-medium text-black dark:text-gray-300 transition-colors duration-300">
+              React
+            </span>
           </div>
 
           <div className=" flex flex-col items-center">
@@ -183,7 +200,9 @@ function About() {
               src="/assets/TailwindLogo.png"
               alt="Tailwind logo"
             />
-            <span className="mt-2 text-sm font-medium">Tailwind CSS</span>
+            <span className="mt-2 text-sm font-medium text-black dark:text-gray-300 transition-colors duration-300">
+              Tailwind CSS
+            </span>
           </div>
           <div className=" flex flex-col items-center">
             <img
@@ -191,7 +210,9 @@ function About() {
               src="/assets/CLogo.png"
               alt="MySQL logo"
             />
-            <span className="mt-2 text-sm font-medium">C</span>
+            <span className="mt-2 text-sm font-medium text-black dark:text-gray-300 transition-colors duration-300">
+              C
+            </span>
           </div>
 
           <div className=" flex flex-col items-center">
@@ -200,7 +221,9 @@ function About() {
               src="/assets/MySQLLogo.png"
               alt="MySQL logo"
             />
-            <span className="mt-2 text-sm font-medium">MySQL</span>
+            <span className="mt-2 text-sm font-medium text-black dark:text-gray-300 transition-colors duration-300">
+              MySQL
+            </span>
           </div>
         </motion.div>
       </motion.div>
