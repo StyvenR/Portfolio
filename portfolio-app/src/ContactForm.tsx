@@ -5,7 +5,7 @@ import emailjs from "@emailjs/browser";
 
 function ContactForm() {
   const { ref, inView } = useInView({
-    threshold: 0.6, // Le pourcentage de visibilité pour déclencher l'animation
+    threshold: 0.6, 
   });
   const form = useRef<HTMLFormElement>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -24,7 +24,6 @@ function ContactForm() {
       .then(
         () => {
           alert("Email envoyé !");
-          // Réinitialiser le formulaire après l'envoi réussi
           form.current?.reset();
         },
         (error) => {
@@ -44,11 +43,11 @@ function ContactForm() {
         animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
         transition={{ duration: 0.5 }}
       >
-        <div className="contact p-8 section-bg-light rounded-xl shadow-lg max-w-md w-full transition-all duration-300">
-          <h2 className="text-center text-3xl font-bold contact-text-dark transition-colors duration-300">
+        <div className="contact p-8 bg-white/15 dark:bg-slate-900/40 backdrop-blur-2xl border border-white/30 dark:border-violet-700/30 shadow-portfolio-light dark:shadow-portfolio-dark rounded-xl max-w-md w-full transition-all duration-300">
+          <h2 className="text-center text-3xl font-bold text-slate-800 dark:text-slate-50 font-extrabold transition-colors duration-300">
             Contactez-moi
           </h2>
-          <p className="contact-subtitle-dark mt-2 transition-colors duration-300">
+          <p className="text-slate-600 dark:text-slate-300 font-medium mt-2 transition-colors duration-300">
             Je suis à votre écoute pour toute question ou collaboration.
           </p>
           <form
@@ -61,7 +60,7 @@ function ContactForm() {
             <div className="form-group">
               <label
                 htmlFor="name"
-                className="block text-sm font-medium contact-label-dark transition-colors duration-300"
+                className="block text-sm font-medium text-slate-700 dark:text-slate-200 font-semibold transition-colors duration-300"
               >
                 Nom:
               </label>
@@ -76,7 +75,7 @@ function ContactForm() {
             <div>
               <label
                 htmlFor="email"
-                className="block text-sm font-medium contact-label-dark transition-colors duration-300"
+                className="block text-sm font-medium text-slate-700 dark:text-slate-200 font-semibold transition-colors duration-300"
               >
                 Email:
               </label>
@@ -91,7 +90,7 @@ function ContactForm() {
             <div className="form-group">
               <label
                 htmlFor="subject"
-                className="block text-sm font-medium contact-label-dark transition-colors duration-300"
+                className="block text-sm font-medium text-slate-700 dark:text-slate-200 font-semibold transition-colors duration-300"
               >
                 Sujet:
               </label>
@@ -106,7 +105,7 @@ function ContactForm() {
             <div>
               <label
                 htmlFor="message"
-                className="block text-sm font-medium contact-label-dark transition-colors duration-300"
+                className="block text-sm font-medium text-slate-700 dark:text-slate-200 font-semibold transition-colors duration-300"
               >
                 Message:
               </label>
@@ -131,7 +130,7 @@ function ContactForm() {
             </button>
           </form>
           <div className="mt-8 text-center">
-            <h3 className="text-lg font-semibold text-black dark:text-white transition-colors duration-300">
+            <h3 className="text-lg font-semibold text-slate-800 dark:text-slate-100 font-bold transition-colors duration-300">
               Réseaux sociaux
             </h3>
             <div className="flex justify-center space-x-4 mt-4">
@@ -139,7 +138,7 @@ function ContactForm() {
                 href="https://www.linkedin.com/in/styven-raya-ab5312302/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-300"
+                className="text-slate-600 dark:text-slate-300 font-medium hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-300"
               >
                 LinkedIn
               </a>
@@ -147,7 +146,7 @@ function ContactForm() {
                 href="https://github.com/StyvenR"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-600 dark:text-gray-300 hover:text-gray-800 dark:hover:text-gray-100 transition-colors duration-300"
+                className="text-slate-600 dark:text-slate-300 font-medium hover:text-slate-800 dark:hover:text-slate-100 transition-colors duration-300"
               >
                 GitHub
               </a>

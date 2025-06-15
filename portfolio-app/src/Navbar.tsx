@@ -31,7 +31,7 @@ function Navbar() {
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: isVisible ? 0 : -100, opacity: isVisible ? 1 : 0 }}
       transition={{ duration: 0.3 }}
-      className="sticky top-0 z-50 flex items-center justify-between px-8 py-4 text-black dark:text-white navbar-glass transition-all duration-300"
+      className="sticky top-0 z-50 flex items-center justify-between px-8 py-4 text-slate-800 dark:text-white bg-white/10 dark:bg-slate-900/60 backdrop-blur-2xl border-b border-violet-300/30 dark:border-violet-700/40 shadow-navbar-light dark:shadow-navbar-dark transition-all duration-300"
     >
       <motion.div
         className="navbar-brand"
@@ -39,7 +39,7 @@ function Navbar() {
         animate={{ opacity: 1 }}
         transition={{ delay: 0.3, duration: 0.5 }}
       >
-        <h1 className="text-2xl font-bold navbar-text-dark transition-colors duration-300">
+        <h1 className="text-2xl font-bold text-slate-800 dark:text-slate-50 font-semibold transition-colors duration-300">
           Portfolio
         </h1>
       </motion.div>
@@ -53,19 +53,19 @@ function Navbar() {
         >
           <motion.a
             href="#about"
-            className="navbar-text-dark hover:opacity-80 transition-all duration-300"
+            className="text-slate-700 dark:text-slate-200 font-semibold hover:text-slate-900 dark:hover:text-slate-50 hover:opacity-80 transition-all duration-300"
           >
             About
           </motion.a>
           <motion.a
             href="#projects"
-            className="navbar-text-dark hover:opacity-80 transition-all duration-300"
+            className="text-slate-700 dark:text-slate-200 font-semibold hover:text-slate-900 dark:hover:text-slate-50 hover:opacity-80 transition-all duration-300"
           >
             Projects
           </motion.a>
           <motion.a
             href="#contact"
-            className="navbar-text-dark hover:opacity-80 transition-all duration-300"
+            className="text-slate-700 dark:text-slate-200 font-semibold hover:text-slate-900 dark:hover:text-slate-50 hover:opacity-80 transition-all duration-300"
           >
             Contact
           </motion.a>

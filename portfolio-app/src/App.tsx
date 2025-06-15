@@ -107,7 +107,7 @@ function App() {
     },
   ];
   return (
-    <div>
+    <div className="portfolio-bg min-h-screen">
       <Navbar />
       <About />
       <Projects projects={projects} />

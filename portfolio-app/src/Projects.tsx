@@ -69,9 +69,9 @@ const Project: React.FC<ProjectsProps> = ({ projects }) => {
       {selectedProject ? (
         <div className="fixed inset-0 bg-black bg-opacity-75 dark:bg-opacity-95 z-50 flex items-center justify-center">
           {" "}
-          <div className="flex w-4/5 h-4/5 project-modal-bg rounded-lg overflow-hidden shadow-2xl">
+          <div className="flex w-4/5 h-4/5 bg-white/20 dark:bg-slate-900/50 backdrop-blur-2xl border border-violet-300/30 dark:border-violet-700/40 shadow-modal-light dark:shadow-modal-dark rounded-lg overflow-hidden">
             {/* Image côté gauche */}
-            <div className="w-1/2 project-image-container flex items-center justify-center p-6">
+            <div className="w-1/2 bg-white/10 dark:bg-slate-800/40 backdrop-blur-lg border border-orange-300/30 dark:border-slate-600/40 flex items-center justify-center p-6">
               <img
                 src={selectedProjectData?.src}
                 alt={selectedProjectData?.name}
@@ -82,12 +82,12 @@ const Project: React.FC<ProjectsProps> = ({ projects }) => {
             {/* Description côté droit */}
             <div className="w-1/2 p-8 flex flex-col">
               <div className="flex justify-between items-center mb-6">
-                <h2 className="text-3xl font-bold text-gray-800 dark:text-white">
+                <h2 className="text-3xl font-bold text-slate-800 dark:text-white">
                   #{selectedProjectData?.name}
                 </h2>
                 <button
                   onClick={() => setSelectedProject(null)}
-                  className="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white p-2"
+                  className="text-slate-600 hover:text-slate-900 dark:text-slate-300 dark:hover:text-white p-2"
                 >
                   <svg
                     className="w-6 h-6"
@@ -107,15 +107,15 @@ const Project: React.FC<ProjectsProps> = ({ projects }) => {
               </div>
 
               <div className="mb-6">
-                <h3 className="text-lg font-semibold text-gray-700 dark:text-gray-300 mb-2">
+                <h3 className="text-lg font-semibold text-slate-700 dark:text-slate-300 mb-2">
                   Description
                 </h3>
-                <p className="text-gray-600 dark:text-gray-400">
+                <p className="text-slate-600 dark:text-slate-400">
                   {selectedProjectData?.description}
                 </p>
               </div>
               <div className="mb-6">
-                <h3 className="text-lg font-semibold text-gray-700 dark:text-gray-300 mb-2">
+                <h3 className="text-lg font-semibold text-slate-700 dark:text-slate-300 mb-2">
                   Lien du projet:
                 </h3>
                 <a
@@ -154,22 +154,24 @@ const Project: React.FC<ProjectsProps> = ({ projects }) => {
               {projects.map((project) => (
                 <li
                   key={project.id}
-                  className="img-container relative cursor-pointer"
+                  className="img-container relative cursor-pointer flex flex-col items-center justify-center"
                   onClick={() => handleProjectClick(project.id)}
                 >
                   <img
                     src={project.src}
                     alt={`project ${project.id}`}
-                    className="rounded-md bg-white border border-gray-300 shadow-xl transition-transform duration-300 transform hover:scale-105"
+                    className="rounded-md bg-white border border-gray-300 shadow-xl transition-transform duration-300 transform hover:scale-105 w-[600px] h-96 object-cover object-center"
                   />
-                  <h3>#{project.name}</h3>
+                  <h3 className="m-0 text-5xl font-bold tracking-tighter leading-tight relative -bottom-7 px-2.5 pb-2.5 rounded-lg inline-block transition-all duration-300 text-gray-900 dark:text-white bg-white/80 dark:bg-gray-800/90 border border-black dark:border-white/30 underline">
+                    #{project.name}
+                  </h3>
                 </li>
               ))}
             </ul>
           </div>
         </section>
       </article>
-      <div className="progress"></div>
+      <div className="progress fixed left-0 right-0 h-1.5 bottom-12 transform scale-x-0 transition-colors duration-300 bg-black dark:bg-white"></div>
     </div>
   );
 };
