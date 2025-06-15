@@ -21,7 +21,7 @@ function About() {
         animate={{ y: 0 }}
         transition={{ duration: 0.8 }}
       >
-        <h2 className="text-4xl font-bold text-center text-black dark:text-white transition-colors duration-300">
+        <h2 className="text-4xl font-bold text-center about-text-dark transition-colors duration-300">
           About Me
         </h2>
         <motion.div
@@ -35,16 +35,16 @@ function About() {
             src={PhotoProfile}
             alt="Styven RAYA"
           />
-          <h3 className="text-2xl font-bold text-black dark:text-white transition-colors duration-300">
+          <h3 className="text-2xl font-bold about-text-dark transition-colors duration-300">
             Styven RAYA
           </h3>
           <motion.div
-            className="text-center mt-12 mx-10 lg:mx-40 max-w-none text-gray-800 dark:text-gray-300 transition-colors duration-300"
+            className="text-center mt-12 mx-10 lg:mx-40 max-w-none about-paragraph-dark transition-colors duration-300"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.5, duration: 1 }}
           >
-            <p className="italic font-serif text-xl text-gray-700 dark:text-gray-200 transition-colors duration-300">
+            <p className="italic font-serif text-xl about-paragraph-dark transition-colors duration-300">
               "Chaque ligne de code est une nouvelle page dans mon histoire
               numérique."
             </p>
@@ -73,7 +73,7 @@ function About() {
             <motion.a
               href={StyvenRayaCV}
               download="Styven_RAYA_CV.png"
-              className="text-lg font-bold text-black dark:text-white bg-white dark:bg-gray-700 border border-black dark:border-gray-500 px-8 py-2 rounded-lg transition-all hover:bg-black dark:hover:bg-white hover:scale-110 hover:text-white dark:hover:text-black hover:shadow-lg"
+              className="about-btn px-8 py-2 rounded-lg"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.5, duration: 1 }}
@@ -83,8 +83,7 @@ function About() {
             <motion.a
               href="https://www.linkedin.com/in/styven-raya-ab5312302/"
               target="_blank"
-              download="Styven_RAYA_CV.png"
-              className="text-lg font-bold text-black dark:text-white bg-white dark:bg-gray-700 border border-black dark:border-gray-500 px-8 py-2 rounded-lg transition-all hover:bg-blue-900 hover:scale-110 hover:text-white hover:shadow-lg"
+              className="about-btn about-btn-linkedin px-8 py-2 rounded-lg"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.5, duration: 1 }}
@@ -99,7 +98,7 @@ function About() {
             <motion.a
               href="https://github.com/StyvenR"
               target="_blank"
-              className="text-lg font-bold text-black dark:text-white bg-white dark:bg-gray-700 border border-black dark:border-gray-500 px-8 py-2 rounded-lg transition-all hover:bg-black dark:hover:bg-white hover:scale-110 hover:text-white dark:hover:text-black hover:shadow-lg"
+              className="about-btn px-8 py-2 rounded-lg"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.5, duration: 1 }}

@@ -45,10 +45,10 @@ function ContactForm() {
         transition={{ duration: 0.5 }}
       >
         <div className="contact p-8 section-bg-light rounded-xl shadow-lg max-w-md w-full transition-all duration-300">
-          <h2 className="text-center text-3xl font-bold text-black dark:text-white transition-colors duration-300">
+          <h2 className="text-center text-3xl font-bold contact-text-dark transition-colors duration-300">
             Contactez-moi
           </h2>
-          <p className="text-gray-600 dark:text-gray-300 mt-2 transition-colors duration-300">
+          <p className="contact-subtitle-dark mt-2 transition-colors duration-300">
             Je suis à votre écoute pour toute question ou collaboration.
           </p>
           <form
@@ -61,7 +61,7 @@ function ContactForm() {
             <div className="form-group">
               <label
                 htmlFor="name"
-                className="block text-sm font-medium text-black dark:text-gray-300 transition-colors duration-300"
+                className="block text-sm font-medium contact-label-dark transition-colors duration-300"
               >
                 Nom:
               </label>
@@ -76,7 +76,7 @@ function ContactForm() {
             <div>
               <label
                 htmlFor="email"
-                className="block text-sm font-medium text-black dark:text-gray-300 transition-colors duration-300"
+                className="block text-sm font-medium contact-label-dark transition-colors duration-300"
               >
                 Email:
               </label>
@@ -91,7 +91,7 @@ function ContactForm() {
             <div className="form-group">
               <label
                 htmlFor="subject"
-                className="block text-sm font-medium text-black dark:text-gray-300 transition-colors duration-300"
+                className="block text-sm font-medium contact-label-dark transition-colors duration-300"
               >
                 Sujet:
               </label>
@@ -106,7 +106,7 @@ function ContactForm() {
             <div>
               <label
                 htmlFor="message"
-                className="block text-sm font-medium text-black dark:text-gray-300 transition-colors duration-300"
+                className="block text-sm font-medium contact-label-dark transition-colors duration-300"
               >
                 Message:
               </label>

@@ -33,7 +33,6 @@ body {
   background-attachment: fixed;
 }
 
-
 .section-bg-light {
   background: rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(20px);
@@ -86,6 +85,57 @@ body {
   background: rgba(30, 41, 59, 0.4);
   backdrop-filter: blur(15px);
   border: 1px solid rgba(71, 85, 105, 0.4);
+}
+
+/* Boutons harmonisés pour la section About */
+.about-btn {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(162, 155, 254, 0.4);
+  color: rgba(74, 144, 226, 1);
+  font-weight: bold;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(74, 144, 226, 0.1);
+}
+
+.about-btn:hover {
+  background: rgba(162, 155, 254, 0.8);
+  border: 1px solid rgba(255, 154, 158, 0.6);
+  color: white;
+  transform: scale(1.05);
+  box-shadow: 0 8px 25px rgba(162, 155, 254, 0.3);
+}
+
+/* Mode sombre pour les boutons About */
+.dark .about-btn {
+  background: rgba(15, 23, 42, 0.3);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(67, 56, 202, 0.5);
+  color: rgba(162, 155, 254, 1);
+  box-shadow: 0 4px 15px rgba(30, 58, 138, 0.2);
+}
+
+.dark .about-btn:hover {
+  background: rgba(67, 56, 202, 0.8);
+  border: 1px solid rgba(88, 28, 135, 0.6);
+  color: white;
+  transform: scale(1.05);
+  box-shadow: 0 8px 25px rgba(67, 56, 202, 0.4);
+}
+
+/* Bouton LinkedIn spécifique */
+.about-btn-linkedin:hover {
+  background: rgba(0, 119, 181, 0.8);
+  border: 1px solid rgba(0, 119, 181, 0.6);
+  color: white;
+}
+
+.dark .about-btn-linkedin:hover {
+  background: rgba(0, 119, 181, 0.8);
+  border: 1px solid rgba(0, 119, 181, 0.6);
+  color: white;
 }
 
 /* Css Projects */
@@ -197,6 +247,77 @@ body {
 /* Dark mode for progress bar */
 .dark .progress {
   background: white;
+}
+
+/* Classes pour améliorer la lisibilité du texte en mode clair */
+
+/* Navbar - Texte plus sombre et contrasté */
+.navbar-text-dark {
+  color: rgba(15, 23, 42, 0.9) !important;
+  text-shadow: 0 1px 3px rgba(255, 255, 255, 0.4);
+  font-weight: 600;
+}
+
+.dark .navbar-text-dark {
+  color: rgba(248, 250, 252, 1) !important;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* About Section - Texte plus sombre */
+.about-text-dark {
+  color: rgba(30, 41, 59, 0.95) !important;
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.3);
+  font-weight: 600;
+}
+
+.dark .about-text-dark {
+  color: rgba(241, 245, 249, 1) !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+}
+
+.about-paragraph-dark {
+  color: rgba(51, 65, 85, 0.9) !important;
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.3);
+  font-weight: 500;
+}
+
+.dark .about-paragraph-dark {
+  color: rgba(203, 213, 225, 1) !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Contact Form - Texte plus sombre */
+.contact-text-dark {
+  color: rgba(15, 23, 42, 0.9) !important;
+  text-shadow: 0 1px 3px rgba(255, 255, 255, 0.4);
+  font-weight: 700;
+}
+
+.dark .contact-text-dark {
+  color: rgba(248, 250, 252, 1) !important;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.contact-label-dark {
+  color: rgba(30, 41, 59, 0.9) !important;
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.3);
+  font-weight: 600;
+}
+
+.dark .contact-label-dark {
+  color: rgba(226, 232, 240, 1) !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.contact-subtitle-dark {
+  color: rgba(51, 65, 85, 0.85) !important;
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.3);
+  font-weight: 500;
+}
+
+.dark .contact-subtitle-dark {
+  color: rgba(203, 213, 225, 1) !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 @media (max-width: 1024px) {

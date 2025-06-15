@@ -39,7 +39,7 @@ function Navbar() {
         animate={{ opacity: 1 }}
         transition={{ delay: 0.3, duration: 0.5 }}
       >
-        <h1 className="text-2xl font-bold bg-gradient-to-r from-black to-gray-50 dark:from-white dark:to-gray-500 text-transparent bg-clip-text">
+        <h1 className="text-2xl font-bold navbar-text-dark transition-colors duration-300">
           Portfolio
         </h1>
       </motion.div>
@@ -53,19 +53,19 @@ function Navbar() {
         >
           <motion.a
             href="#about"
-            className="bg-gradient-to-r from-gray-400 to-black dark:from-gray-300 dark:to-white text-transparent bg-clip-text hover:text-gray-300 transition-colors"
+            className="navbar-text-dark hover:opacity-80 transition-all duration-300"
           >
             About
           </motion.a>
           <motion.a
             href="#projects"
-            className="bg-gradient-to-r from-gray-400 to-black dark:from-gray-300 dark:to-white text-transparent bg-clip-text hover:text-gray-300 transition-colors"
+            className="navbar-text-dark hover:opacity-80 transition-all duration-300"
           >
             Projects
           </motion.a>
           <motion.a
             href="#contact"
-            className="bg-gradient-to-r from-gray-400 to-black dark:from-gray-300 dark:to-white text-transparent bg-clip-text hover:text-gray-300 transition-colors"
+            className="navbar-text-dark hover:opacity-80 transition-all duration-300"
           >
             Contact
           </motion.a>
