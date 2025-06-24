@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import PhotoProfile from "/assets/Photo-profile.png";
-import StyvenRayaCV from "/assets/Styven_RAYA_CV.png";
+import StyvenRayaCV from "/assets/CV_STYVEN_RAYA.pdf";
 import { useInView } from "react-intersection-observer";
 
 function About() {
@@ -65,14 +65,15 @@ function About() {
               allient élégance et performance.
             </p>
             <p>
-              Je m'appelle Styven RAYA, actuellement en formation, je suis à la
-              recherche d'une alternance en tant que développeur web.
+              Je m'appelle Styven RAYA, j'ai 21 ans,  actuellement en formation, je suis à la
+              recherche d'une alternance pour une durée de 14 mois en tant que développeur web.
             </p>
           </motion.div>
           <div className="flex gap-4 mt-8">
             <motion.a
               href={StyvenRayaCV}
-              download="Styven_RAYA_CV.png"
+              download="CV_STYVEN_RAYA.pdf"
+              target="_blank"
               className="bg-white/20 dark:bg-slate-900/30 backdrop-blur-md border border-violet-300/40 dark:border-violet-700/50 text-blue-600 dark:text-violet-300 font-bold px-8 py-2 rounded-lg transition-all duration-300 hover:bg-violet-300/80 dark:hover:bg-violet-700/80 hover:border-pink-300/60 dark:hover:border-purple-600/60 hover:text-white hover:scale-105 shadow-btn-light dark:shadow-btn-dark hover:shadow-btn-hover-light dark:hover:shadow-btn-hover-dark"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
