@@ -120,8 +120,8 @@ function App() {
       id: "011",
       name: "H5AI",
       description:
-        "H5AI est un projet de gestion de fichiers et de médias, permettant aux utilisateurs de visualiser et organiser leurs fichiers de manière intuitive. Il offre une interface utilisateur élégante et des fonctionnalités avancées pour la gestion des médias.",
-      link: "https://github.com/StyvenR/Free-Ads",
+        "H5AI est un projet de gestion de fichiers, permettant aux utilisateurs de visualiser et organiser leurs fichiers de manière intuitive. Ce projet met en avant l'utilisation de technologies web pour la gestion de contenu.",
+      link: "https://github.com/StyvenR/H5AI",
       duration: "2 semaines",
       src: H5AI,
       teamSize: "2 personnes",
