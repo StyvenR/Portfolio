@@ -12,6 +12,7 @@ import MyQuizImg from "/assets/MyQuizImg.png";
 import SnapchatImg from "/assets/SnapchatImg.jpg";
 import MernImg from "/assets/MernImg.png";
 import FreeAdsImg from "/assets/FreeAdsImg.png";
+import H5AI from "/assets/H5AI.png";
 
 function App() {
   const projects = [
@@ -23,6 +24,7 @@ function App() {
       link: "https://github.com/StyvenR/Morpion",
       duration: "3 heures",
       src: MorpionImg,
+      teamSize: "Solo",
     },
     {
       id: "002",
@@ -32,6 +34,7 @@ function App() {
       link: "https://github.com/StyvenR/puissance4",
       duration: "2 semaines",
       src: Puissance4Img,
+      teamSize: "Solo",
     },
     {
       id: "003",
@@ -41,6 +44,7 @@ function App() {
       link: "https://github.com/StyvenR/CSSGenerator",
       duration: "2 semaines",
       src: CssGeneratorImg,
+      teamSize: "Solo",
     },
     {
       id: "004",
@@ -50,6 +54,7 @@ function App() {
       link: "https://github.com/StyvenR/MyMeetic",
       duration: "2 semaines",
       src: MyMeeticImg,
+      teamSize: "Solo",
     },
     {
       id: "005",
@@ -59,6 +64,7 @@ function App() {
       link: "https://github.com/StyvenR/MyTwitter",
       duration: "4 semaines",
       src: MyTwitterImg,
+      teamSize: "4 personnes",
     },
     {
       id: "006",
@@ -68,6 +74,7 @@ function App() {
       link: "https://github.com/StyvenR/MySpotify",
       duration: "1 semaines",
       src: MySpotify,
+      teamSize: "2 personnes",
     },
     {
       id: "007",
@@ -77,6 +84,7 @@ function App() {
       link: "https://github.com/StyvenR/My-Quiz",
       duration: "2 semaines",
       src: MyQuizImg,
+      teamSize: "4 personnes",
     },
     {
       id: "008",
@@ -84,8 +92,9 @@ function App() {
       description:
         "Un clone de Snapchat développé pour reproduire les fonctionnalités principales de l'application de messagerie éphémère. Ce projet explore les concepts de partage de médias temporaires et de communication instantanée.",
       link: "https://github.com/StyvenR/Snapchat-Styven",
-      duration: "3 semaines",
+      duration: "2 semaines",
       src: SnapchatImg,
+      teamSize: "2 personnes",
     },
     {
       id: "009",
@@ -93,8 +102,9 @@ function App() {
       description:
         "Une application full-stack développée avec la stack MERN (MongoDB, Express.js, React, Node.js). Ce projet démontre une architecture moderne pour le développement d'applications web complètes.",
       link: "https://github.com/StyvenR/MERN-Styven",
-      duration: "4 semaines",
+      duration: "2 semaines",
       src: MernImg,
+      teamSize: "Solo",
     },
     {
       id: "010",
@@ -102,8 +112,19 @@ function App() {
       description:
         "Une plateforme de petites annonces gratuites permettant aux utilisateurs de publier et consulter des annonces diverses. Ce projet intègre un système de gestion d'annonces avec recherche et filtrage.",
       link: "https://github.com/StyvenR/Free-Ads",
-      duration: "3 semaines",
+      duration: "2 semaines",
       src: FreeAdsImg,
+      teamSize: "Solo",
+    },
+    {
+      id: "011",
+      name: "H5AI",
+      description:
+        "H5AI est un projet de gestion de fichiers et de médias, permettant aux utilisateurs de visualiser et organiser leurs fichiers de manière intuitive. Il offre une interface utilisateur élégante et des fonctionnalités avancées pour la gestion des médias.",
+      link: "https://github.com/StyvenR/Free-Ads",
+      duration: "2 semaines",
+      src: H5AI,
+      teamSize: "2 personnes",
     },
   ];
   return (

@@ -9,6 +9,7 @@ interface ProjectsProps {
     link: string;
     duration: string;
     src: string;
+    teamSize: string;
   }[];
 }
 
@@ -68,75 +69,77 @@ const Project: React.FC<ProjectsProps> = ({ projects }) => {
   return (
     <div>
       {selectedProject ? (
-      <div className="fixed inset-0 bg-black/30 dark:bg-black/50 z-50 flex items-center justify-center">
-        <div className="flex w-4/5 h-4/5 bg-portfolio-light-modal dark:bg-portfolio-dark-modal backdrop-blur-2xl border border-portfolio-light-modal-border dark:border-portfolio-dark-modal-border shadow-modal-light dark:shadow-modal-dark rounded-lg overflow-hidden">
-        {/* Image côté gauche */}
-        <div className="w-1/2 bg-portfolio-light-image-container dark:bg-portfolio-dark-image-container backdrop-blur-lg border border-portfolio-light-image-border dark:border-portfolio-dark-image-border flex items-center justify-center p-6">
-          <img
-          src={selectedProjectData?.src}
-          alt={selectedProjectData?.name}
-          className="max-h-full max-w-full object-contain rounded-lg shadow-md"
-          />
-        </div>
+        <div className="fixed inset-0 bg-black/30 dark:bg-black/50 z-50 flex items-center justify-center">
+          <div className="flex w-4/5 h-4/5 bg-portfolio-light-modal dark:bg-portfolio-dark-modal backdrop-blur-2xl border border-portfolio-light-modal-border dark:border-portfolio-dark-modal-border shadow-modal-light dark:shadow-modal-dark rounded-lg overflow-hidden">
+            {/* Image côté gauche */}
+            <div className="w-1/2 bg-portfolio-light-image-container dark:bg-portfolio-dark-image-container backdrop-blur-lg border border-portfolio-light-image-border dark:border-portfolio-dark-image-border flex items-center justify-center p-6">
+              <img
+                src={selectedProjectData?.src}
+                alt={selectedProjectData?.name}
+                className="max-h-full max-w-full object-contain rounded-lg shadow-md"
+              />
+            </div>
 
-        {/* Description côté droit */}
-        <div className="w-1/2 p-8 flex flex-col">
-          <div className="flex justify-between items-center mb-6">
-          <h2 className="text-3xl font-bold text-white">
-            #{selectedProjectData?.name}
-          </h2>
-          <button
-            onClick={() => setSelectedProject(null)}
-            className="text-white hover:text-gray-200 p-2 rounded-lg hover:bg-slate-200/50 dark:hover:bg-slate-700/50 transition-all duration-300"
-          >
-            <svg
-            className="w-6 h-6"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-            >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              d="M6 18L18 6M6 6l12 12"
-            ></path>
-            </svg>
-          </button>
-          </div>
+            {/* Description côté droit */}
+            <div className="w-1/2 p-8 flex flex-col">
+              <div className="flex justify-between items-center mb-6">
+                <h2 className="text-3xl font-bold text-white">
+                  #{selectedProjectData?.name}
+                </h2>
+                <button
+                  onClick={() => setSelectedProject(null)}
+                  className="text-white hover:text-gray-200 p-2 rounded-lg hover:bg-slate-200/50 dark:hover:bg-slate-700/50 transition-all duration-300"
+                >
+                  <svg
+                    className="w-6 h-6"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M6 18L18 6M6 6l12 12"
+                    ></path>
+                  </svg>
+                </button>
+              </div>
 
-          <div className="mb-6">
-          <h3 className="text-lg font-semibold text-white mb-2">
-            Description
-          </h3>
-          <p className="text-gray-200">
-            {selectedProjectData?.description}
-          </p>
-          </div>
-          <div className="mb-6">
-          <h3 className="text-lg font-semibold text-white mb-2">
-            Lien du projet:
-          </h3>
-          <a
-            href={selectedProjectData?.link}
-            target="_blank"
-            className="text-gray-200 hover:text-gray-200 hover:underline transition-colors duration-300"
-          >
-            {selectedProjectData?.link}
-          </a>
-          </div>
-          <div className="mb-6">
-          <h3 className="text-lg font-semibold text-white mb-2">
-            Durée
-          </h3>
-          <p className="text-gray-200">
-            {selectedProjectData?.duration}
-          </p>
+              <div className="mb-6">
+                <h3 className="text-lg font-semibold text-white mb-2">
+                  Description
+                </h3>
+                <p className="text-gray-200">
+                  {selectedProjectData?.description}
+                </p>
+              </div>
+              <div className="mb-6">
+                <h3 className="text-lg font-semibold text-white mb-2">
+                  Lien du projet:
+                </h3>
+                <a
+                  href={selectedProjectData?.link}
+                  target="_blank"
+                  className="text-gray-200 hover:text-gray-200 hover:underline transition-colors duration-300"
+                >
+                  {selectedProjectData?.link}
+                </a>
+              </div>
+              <div className="mb-6">
+                <h3 className="text-lg font-semibold text-white mb-2">Durée</h3>
+                <p className="text-gray-200">{selectedProjectData?.duration}</p>
+              </div>
+              <div className="mb-6">
+                <h3 className="text-lg font-semibold text-white mb-2">
+                  Équipe
+                </h3>
+                <p className="text-gray-200">{selectedProjectData?.teamSize}</p>
+              </div>
+            </div>
           </div>
         </div>
-        </div>
-      </div>
       ) : null}
 
       <article id="project-img">
