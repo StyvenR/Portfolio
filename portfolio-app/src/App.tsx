@@ -25,6 +25,7 @@ function App() {
       duration: "3 heures",
       src: MorpionImg,
       teamSize: "Solo",
+      technologies: ["HTML", "CSS", "JavaScript"],
     },
     {
       id: "002",
@@ -35,6 +36,7 @@ function App() {
       duration: "2 semaines",
       src: Puissance4Img,
       teamSize: "Solo",
+      technologies: ["HTML", "CSS", "JavaScript"],
     },
     {
       id: "003",
@@ -45,6 +47,7 @@ function App() {
       duration: "2 semaines",
       src: CssGeneratorImg,
       teamSize: "Solo",
+      technologies: ["PHP", "CSS", "HTML"],
     },
     {
       id: "004",
@@ -55,6 +58,7 @@ function App() {
       duration: "2 semaines",
       src: MyMeeticImg,
       teamSize: "Solo",
+      technologies: ["PHP", "MySQL", "HTML", "TailwindCSS", "JavaScript"],
     },
     {
       id: "005",
@@ -65,6 +69,7 @@ function App() {
       duration: "4 semaines",
       src: MyTwitterImg,
       teamSize: "4 personnes",
+      technologies: ["PHP", "MySQL", "HTML", "JavaScript", "TailwindCSS"],
     },
     {
       id: "006",
@@ -75,6 +80,7 @@ function App() {
       duration: "1 semaines",
       src: MySpotify,
       teamSize: "2 personnes",
+      technologies: ["React", "JavaScript", "API", "TailwindCSS"],
     },
     {
       id: "007",
@@ -85,6 +91,7 @@ function App() {
       duration: "2 semaines",
       src: MyQuizImg,
       teamSize: "4 personnes",
+      technologies: ["Symfony","PHP", "Doctrine", "Twig" ],
     },
     {
       id: "008",
@@ -95,6 +102,7 @@ function App() {
       duration: "2 semaines",
       src: SnapchatImg,
       teamSize: "2 personnes",
+      technologies: ["React Native", "JavaScript", "Expo GO", "TailwindCSS", "API"],
     },
     {
       id: "009",
@@ -105,6 +113,7 @@ function App() {
       duration: "2 semaines",
       src: MernImg,
       teamSize: "Solo",
+      technologies: ["MongoDB", "Express.js", "React", "Node.js"],
     },
     {
       id: "010",
@@ -115,6 +124,7 @@ function App() {
       duration: "2 semaines",
       src: FreeAdsImg,
       teamSize: "Solo",
+      technologies: ["Laravel", "PHP", "Blade", "Mysql", "TailwindCSS"],
     },
     {
       id: "011",
@@ -125,6 +135,7 @@ function App() {
       duration: "2 semaines",
       src: H5AI,
       teamSize: "2 personnes",
+      technologies: ["Node.js", "Express", "Pug"],
     },
   ];
   return (

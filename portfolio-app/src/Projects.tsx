@@ -10,6 +10,7 @@ interface ProjectsProps {
     duration: string;
     src: string;
     teamSize: string;
+    technologies: string[];
   }[];
 }
 
@@ -136,6 +137,21 @@ const Project: React.FC<ProjectsProps> = ({ projects }) => {
                   Équipe
                 </h3>
                 <p className="text-gray-200">{selectedProjectData?.teamSize}</p>
+              </div>
+              <div className="mb-6">
+                <h3 className="text-lg font-semibold text-white mb-2">
+                  Technologies
+                </h3>
+                <div className="flex flex-wrap gap-2">
+                  {selectedProjectData?.technologies.map((tech, index) => (
+                    <span
+                      key={index}
+                      className="px-3 py-1 bg-blue-600/20 text-blue-300 rounded-full text-sm border border-blue-500/30"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
